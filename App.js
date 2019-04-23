@@ -30,6 +30,10 @@ export default class App extends React.Component {
             <Text style={styles.memoDate}>2019.2.3</Text>
           </View>
         </View>
+
+        <View style={styles.memoAddButton}>
+          <Text style={styles.memoAddButtonTitle}>+</Text>
+        </View>
       </View>
     );
   }
@@ -41,14 +45,15 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: 60
+    paddingTop: 60,
+    backgroundColor: "#FFFDF6"
   },
   appber: {
     position: "absolute",
     top: 0,
     left: 0,
     right: 0,
-    backgroundColor: "#000",
+    backgroundColor: "#00B902",
     width: "100%",
     height: 60,
     paddingTop: 30,
@@ -57,11 +62,13 @@ const styles = StyleSheet.create({
   },
   appberTitle: {
     color: "white",
-    fontSize: 18
+    fontSize: 18,
+    lineHeight: 18
   },
   memoList: {
     width: "100%",
-    flex: 1
+    flex: 1,
+    backgroundColor: "#FFF"
   },
   memoListItem: {
     padding: 16,
@@ -75,7 +82,24 @@ const styles = StyleSheet.create({
   memoDate: {
     fontSize: 12,
     color: "#a2a2a2"
+  },
+  memoAddButton: {
+    position: "absolute",
+    bottom: 18,
+    right: 18,
+    backgroundColor: "#E31676",
+    width: 50,
+    height: 50,
+    borderRadius: 50,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  memoAddButtonTitle: {
+    fontSize: 30,
+    color: "white",
+    lineHeight: 30
   }
 });
 
-// メモ ViewタグにはColorのスタイルが当てられない
+// メモ Viewタグにはテキストのスタイルが当てられない
+// shadowはプロパティが違う
