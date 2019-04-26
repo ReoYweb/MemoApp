@@ -1,7 +1,20 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
+import { Font } from "expo";
+import fontAwsome from "../../assets/fonts/fa-solid-900.ttf";
 
 class AddButton extends React.Component {
+  state = {
+    fontLoaded: false
+  };
+
+  async componentWillMount() {
+    await Font.loadAsync({
+      FontAwsome: fontAwsome
+    });
+    this.setState({ fontLoaded: true });
+  }
+
   render() {
     const { style, color } = this.props;
 
@@ -15,9 +28,11 @@ class AddButton extends React.Component {
 
     return (
       <View style={[styles.memoAddButton, style, { backgroundColor: bgColor }]}>
-        <Text style={[styles.memoAddButtonTitle, { color: textColor }]}>
-          {this.props.children}
-        </Text>
+        {this.state.fontLoaded ? (
+          <Text style={[styles.memoAddButtonTitle, { color: textColor }]}>
+            {this.props.children}
+          </Text>
+        ) : null}
       </View>
     );
   }
@@ -28,7 +43,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 18,
     right: 18,
-    backgroundColor: "#E31676",
     width: 50,
     height: 50,
     borderRadius: 50,
@@ -36,9 +50,9 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   memoAddButtonTitle: {
-    fontSize: 30,
-    color: "white",
-    lineHeight: 30
+    fontFamily: "FontAwsome",
+    fontSize: 24,
+    lineHeight: 24
   }
 });
 

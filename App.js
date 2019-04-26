@@ -30,3 +30,4 @@ const styles = StyleSheet.create({
 
 // メモ Viewタグにはテキストのスタイルが当てられない
 // shadowはプロパティが違う
+// エキスポでfontawsomeを使うときは独自の記述が必要でエキスポのサイトでcustomefontで検索をかけると使い方を確認できる

@@ -9,7 +9,7 @@ class MemoListScreen extends React.Component {
     return (
       <View>
         <MemoList />
-        <AddButton>+</AddButton>
+        <AddButton>{"\uf067"}</AddButton>
       </View>
     );
   }

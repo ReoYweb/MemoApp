@@ -20,7 +20,7 @@ class MemoDetailScreen extends React.Component {
         </View>
 
         <AddButton color="white" style={styles.editButton}>
-          +
+          {"\uf303"}
         </AddButton>
       </View>
     );
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   },
   memoHeader: {
     height: 100,
-    backgroundColor: "#001108",
+    backgroundColor: "#005701",
     justifyContent: "center",
     padding: 10
   },
@@ -54,7 +54,8 @@ const styles = StyleSheet.create({
     paddingRight: 10
   },
   editButton: {
-    top: 75
+    top: 75,
+    fontSize: 14
   }
 });
 
