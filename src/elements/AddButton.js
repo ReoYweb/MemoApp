@@ -5,7 +5,7 @@ class AddButton extends React.Component {
   render() {
     return (
       <View style={styles.memoAddButton}>
-        <Text style={styles.memoAddButtonTitle}>+</Text>
+        <Text style={styles.memoAddButtonTitle}>{this.props.children}</Text>
       </View>
     );
   }

@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import AppBar from "./src/components/AppBar";
-import MemoList from "./src/components/MemoList";
-import AddButton from "./src/elements/AddButton";
+import MemoListScreen from "./src/screens/MemoListScreen";
+
 // import BodyText from "./src/elements/BodyText";
 
 export default class App extends React.Component {
@@ -10,8 +10,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <AppBar />
-        <MemoList />
-        <AddButton />
+        <MemoListScreen />
       </View>
     );
   }
