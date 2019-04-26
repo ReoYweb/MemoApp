@@ -19,7 +19,9 @@ class MemoDetailScreen extends React.Component {
           <Text>講座のアイデアです</Text>
         </View>
 
-        <AddButton />
+        <AddButton color="white" style={styles.editButton}>
+          +
+        </AddButton>
       </View>
     );
   }
@@ -32,7 +34,7 @@ const styles = StyleSheet.create({
   },
   memoHeader: {
     height: 100,
-    backgroundColor: "#DDD",
+    backgroundColor: "#001108",
     justifyContent: "center",
     padding: 10
   },
@@ -45,6 +47,14 @@ const styles = StyleSheet.create({
   memoHeaderDate: {
     fontSize: 12,
     color: "#fff"
+  },
+  memoContent: {
+    paddingTop: 10,
+    paddingLeft: 10,
+    paddingRight: 10
+  },
+  editButton: {
+    top: 75
   }
 });
 
