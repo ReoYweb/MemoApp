@@ -2,8 +2,9 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import AppBar from "./src/components/AppBar";
 // import MemoListScreen from "./src/screens/MemoListScreen";
-import MemoEditScreen from "./src/screens/MemoEditScreen";
-
+// import MemoEditScreen from "./src/screens/MemoEditScreen";
+// import LoginScreen from "./src/screens/LoginScreen";
+import SignupScreen from "./src/screens/SignupScreen";
 // import BodyText from "./src/elements/BodyText";
 
 export default class App extends React.Component {
@@ -11,7 +12,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <AppBar />
-        <MemoEditScreen />
+        <SignupScreen />
       </View>
     );
   }

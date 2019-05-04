@@ -1,12 +1,12 @@
 import React from "react";
-import { StyleSheet, View, Text, TextInput } from "react-native";
+import { StyleSheet, View, TextInput } from "react-native";
 import AddButton from "../elements/AddButton";
 
 class MemoEditScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <TextInput
+        <TextInput style={styles.memoEditInput} multiline value="Hi" />
         <AddButton>{"\uf00c"}</AddButton>
       </View>
     );
@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
     paddingTop: 32,
     paddingLeft: 16,
     paddingRight: 16,
-    paddingBottom: 16
+    paddingBottom: 16,
+    fontSize: 16
   }
 });
 
