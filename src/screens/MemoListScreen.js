@@ -8,7 +8,7 @@ class MemoListScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <MemoList />
+        <MemoList navigation={this.props.navigation} />
         <AddButton>{"\uf067"}</AddButton>
       </View>
     );

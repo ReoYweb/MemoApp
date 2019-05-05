@@ -19,7 +19,13 @@ class MemoDetailScreen extends React.Component {
           <Text>講座のアイデアです</Text>
         </View>
 
-        <AddButton color="white" style={styles.editButton}>
+        <AddButton
+          color="white"
+          style={styles.editButton}
+          onPress={() => {
+            this.props.navigation.navigate("MemoEditScreen");
+          }}
+        >
           {"\uf303"}
         </AddButton>
       </View>

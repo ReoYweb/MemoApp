@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, TouchableHighlight } from "react-native";
 import { Font } from "expo";
 import fontAwsome from "../../assets/fonts/fa-solid-900.ttf";
 
@@ -16,7 +16,7 @@ class AddButton extends React.Component {
   }
 
   render() {
-    const { style, color } = this.props;
+    const { style, color, onPress } = this.props;
 
     let bgColor = "#E31676";
     let textColor = "#fff";
@@ -27,22 +27,32 @@ class AddButton extends React.Component {
     }
 
     return (
-      <View style={[styles.memoAddButton, style, { backgroundColor: bgColor }]}>
-        {this.state.fontLoaded ? (
-          <Text style={[styles.memoAddButtonTitle, { color: textColor }]}>
-            {this.props.children}
-          </Text>
-        ) : null}
-      </View>
+      <TouchableHighlight
+        style={[styles.container, style]}
+        onPress={onPress}
+        underlayColor="transparent"
+      >
+        <View style={[styles.memoAddButton, { backgroundColor: bgColor }]}>
+          {this.state.fontLoaded ? (
+            <Text style={[styles.memoAddButtonTitle, { color: textColor }]}>
+              {this.props.children}
+            </Text>
+          ) : null}
+        </View>
+      </TouchableHighlight>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  memoAddButton: {
+  container: {
     position: "absolute",
     bottom: 18,
     right: 18,
+    width: 50,
+    height: 50
+  },
+  memoAddButton: {
     width: 50,
     height: 50,
     borderRadius: 50,
