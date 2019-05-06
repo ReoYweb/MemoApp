@@ -9,7 +9,13 @@ class MemoListScreen extends React.Component {
     return (
       <View style={styles.container}>
         <MemoList navigation={this.props.navigation} />
-        <AddButton>{"\uf067"}</AddButton>
+        <AddButton
+          onPress={() => {
+            this.props.navigation.navigate("MemoEditScreen");
+          }}
+        >
+          {"\uf067"}
+        </AddButton>
       </View>
     );
   }
